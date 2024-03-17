@@ -1,0 +1,27 @@
+<section>
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 mb-3" *ngFor="let doc of doctors">
+        <div class="card shadow-sm p-2 border-0">
+          <img
+            src="assets/images/branimir-balogovic-fAiQRv7FgE0-unsplash.jpg"
+            class="card-img-top w-100 "
+            alt="doctor"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title">
+              {{doc.first_name | fullName : doc.last_name }}
+            </h5>
+            <p class="card-text">{{ doc.biography }}</p>
+            <div class="text-start">
+              <a class="btn btn-main-color rounded-1" [routerLink]="['/doctors/details', doc._id]"
+              >more details
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

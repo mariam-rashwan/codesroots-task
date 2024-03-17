@@ -1,0 +1,64 @@
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <div class="card shadow-sm px-2 py-3">
+          <div class="row">
+            <div class="col-md-6">
+              <img
+                src="assets/images/doctor.png"
+                class="card-img-top w-100"
+                alt="doctor"
+              />
+            </div>
+            <!-- doctor info -->
+            <div class="col-md-6">
+              <app-doctor-info [doctorInfo]="doctors[0]"></app-doctor-info>
+            </div>
+
+            <!-- third part doctors category -->
+
+            <div class="col-lg-12 mt-3 mx-auto px-3">
+              <div>
+                <h3 class="section-title fw-bold fs-3 m-2 py-3 px-2 d-block">
+                  Category
+                </h3>
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2">
+                    <div
+                      class="col mb-3"
+                      *ngFor="let item of doctors[0].category"
+                    >
+                      <app-category [category]="item"></app-category>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /// -->
+            <!-- fourth sechudale   -->
+
+            <section class="my-2 pb-2 mx-auto px-3">
+              <div>
+                <h3 class="section-title fw-bold fs-3 m-2 py-3 px-2 d-block">
+                  schedules
+                </h3>
+
+                <div class="container">
+                  <div class="row">
+                    <div
+                      class="col-md-4 col-sm-6"
+                      *ngFor="let item of doctors[0].schedules"
+                    >
+                      <app-doctor-scheduales
+                        [schedule]="item"
+                      ></app-doctor-scheduales>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

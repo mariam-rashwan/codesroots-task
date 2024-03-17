@@ -1,0 +1,10 @@
+section{
+    max-height: auto;  
+    background-color: var(--light-bg);
+}
+
+.custom{
+    min-height: 30rem;
+    max-height: 40rem;
+
+}

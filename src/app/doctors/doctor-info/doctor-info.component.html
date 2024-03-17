@@ -1,0 +1,70 @@
+<div class="card-body">
+    <!-- first part doctor name -->
+    <div class="text-center light-body-bg py-4">
+      <h3 class="card-title fs-3 fw-bold rounded w-100 mb-2">
+        {{
+          doctors?.first_name | fullName : doctors?.last_name
+        }}
+      </h3>
+      <span class="main-color fw-bold p-2 fs-6">{{
+        doctors?.biography
+      }}</span>
+    </div>
+    <!-- second part doctor info -->
+
+    <div class="doctor-info my-4">
+      <ul class="list-unstyled mb-1-9 mx-3">
+        <li class="mb-3">
+          <span class="me-2 info-formate"
+            ><i
+              class="fa-solid fa-money-bill mx-2 main-color fa-lg"
+            ></i>
+            {{ doctors?.price | currency }}</span
+          >
+        </li>
+
+        <li class="mb-3">
+          <span class="me-2 info-formate"
+            ><i
+              class="fa-solid fa-location-dot mx-2 main-color fa-lg"
+            ></i>
+            {{ doctors?.address }}</span
+          >
+        </li>
+
+        <li class="mb-3">
+          <span class="me-2 info-formate"
+            ><i
+              class="fa-solid fa-envelope mx-2 main-color fa-lg"
+            ></i>
+            {{ doctors?.email }}</span
+          >
+        </li>
+
+        <li class="mb-3">
+          <span class="me-2 info-formate"
+            ><i class="fa-solid fa-phone mx-2 main-color fa-lg"></i>
+            {{ doctors?.mobile }}</span
+          >
+        </li>
+
+        <li class="mb-3">
+          <span class="me-2 info-formate"
+            ><i
+              class="fa-solid fa-address-card mx-2 main-color fa-lg"
+            ></i>
+            {{ doctors?.nationalId }}</span
+          >
+        </li>
+
+        <li class="mb-3">
+          <span class="me-2 info-formate"
+            ><i
+              class="fa-solid fa-mars-and-venus mx-2 main-color fa-lg"
+            ></i>
+            {{ doctors?.gender }}</span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>

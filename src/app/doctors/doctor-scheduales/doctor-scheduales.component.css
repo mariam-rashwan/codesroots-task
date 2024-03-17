@@ -1,0 +1,9 @@
+.card-formating{
+    box-shadow: 0px 1px 2px #7655da;
+  
+  }
+
+  .card-formating:hover{
+    box-shadow: 0px 2px 4px #7655da;
+
+  }

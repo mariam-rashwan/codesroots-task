@@ -1,0 +1,11 @@
+<section>
+    <div class="container py-4">
+      <div class="row" *ngIf="products.length">
+        <h4 class="main-color text-center py-3"> Products With {{products[0].category['name_en']}} Category</h4>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3" *ngFor="let prod of products">
+       <app-product [product]="prod"></app-product>
+        </div>
+      </div>
+    </div>
+  </section>
+  
