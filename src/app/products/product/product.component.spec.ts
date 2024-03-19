@@ -15,11 +15,21 @@ describe('ProductComponent', () => {
     
     fixture = TestBed.createComponent(ProductComponent);
     component = fixture.componentInstance;
-
-    // fixture.detectChanges();
+    //  fixture.detectChanges();
   });
 
   it('product should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  
+  it('should handle image error', () => {
+    const event = {
+      target: {
+        src: ''
+      }
+    };
+    component.onImgError(event);
+    expect(event.target.src).toContain('assets/images/product.jpg');
   });
 });
