@@ -1,5 +1,5 @@
 <div class="card shadow-sm p-2 border-0 custom">
-   <div class="text-center">
+   <div class="text-center ">
     <img
     [src]="prod.photo"
     class="card-img-top  w-75"
@@ -12,15 +12,15 @@
 
   <div class="card-body">
     <h5 class="card-title ">
-      {{prod.name_en }}
+      {{prod.name_en |truncate:10}}
     </h5>
     <p class="card-text main-color fw-500">#{{prod.category['name_en'] }}</p>
 
   <p>
-    <small>{{prod.short_description_en | truncate }}</small>
+    <small>{{prod.short_description_en | truncate :18}}</small>
   </p>
     <div class="text-start endItem">
-      <a class="btn btn-main-color rounded-1" routerLink="/products"
+      <a class="btn btn-main-color rounded-1 mb-2" routerLink="/products"
       >more details
     </a>
     </div>

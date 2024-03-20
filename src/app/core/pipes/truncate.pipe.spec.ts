@@ -14,11 +14,11 @@ describe('TruncatePipe', () => {
   });
 
 
-  it('should truncate the input string to 15 words', () => {
-    const input = 'It helps to restore the bodys natural balance and provides hydration to health purity and quality drinking water that keeps you fresh and rejuvenated throughout the day.\r\nNow always have clean and safe water with this drinking water bottle';
-    const result = pipe.transform(input);
-    expect(result).toEqual('It helps to restore the bodys natural balance and provides hydration to health purity and quality drinking water....');
-  });
+  it('should truncate string to specified number of words', () => {
+   const input = 'It helps to restore the bodys natural balance and provides hydration to health purity and quality drinking water that keeps you fresh and rejuvenated throughout the day.\r\nNow always have clean and safe water with this drinking water bottle';
+  const expectedOutput = 'It helps to restore the bodys natural balance and provides hydration to health purity and quality drinking water....';
+    expect(pipe.transform(input, 18)).toBe(expectedOutput);
+  });   
 
   
   it('create an instance', () => {

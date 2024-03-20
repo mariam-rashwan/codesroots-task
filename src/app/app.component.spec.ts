@@ -1,16 +1,24 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { SpinnerComponent } from './core/components/spinner/spinner.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoaderService } from './core/services/loader.service';
+import { LoaderInterceptor } from './core/interceptors/loader.interceptor';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule, SpinnerComponent],
+      declarations: [AppComponent],
+      // providers: [
+      //   LoaderService,
+      //   {
+      //     provide: HTTP_INTERCEPTORS,
+      //     useClass: LoaderInterceptor,
+      //     multi: true,
+      //   },
+      // ],
     }).compileComponents();
   });
 
